@@ -40,7 +40,7 @@ describe("functions", function() {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ ADD CODE HERE ✏️
-
+        var otherFunction = myFunction;
             ////////////////////////////////////////////////////////////////////
 
             if (myFunction !== otherFunction) {
@@ -57,7 +57,7 @@ describe("functions", function() {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ EDIT LINE BELOW ✏️
-            myFunction(); // why is myFunction not callable?
+         myFunction(); // why is myFunction not callable?
             ////////////////////////////////////////////////////////////////////
         });
     });
