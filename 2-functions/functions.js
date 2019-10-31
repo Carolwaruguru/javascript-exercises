@@ -57,11 +57,11 @@ describe("functions", function() {
 
             ////////////////////////////////////////////////////////////////////
             // ✏️ EDIT LINE BELOW ✏️
-         myFunction(); // why is myFunction not callable?
+        var myFunction = function myFunction() {}; // why is myFunction not callable?
             ////////////////////////////////////////////////////////////////////
         });
     });
-
+    
     describe("Called without explicit context", () => {
         it("should run without errors", function() {
             function getContext() {
