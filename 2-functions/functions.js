@@ -199,7 +199,7 @@ describe("functions", function() {
             // Is there something even stronger than .bind()?
             // Find a way to call getContext(), but with a different context than 'context'.
             // ✏️ EDIT LINE BELOW ✏️
-            const result = getContext();
+            const result = new getContext();
             ////////////////////////////////////////////////////////////////////
 
             if (result === context) {
@@ -221,7 +221,7 @@ describe("functions", function() {
                 // Unfortunately, it does not specify any parameters.
                 // Find a way to retrieve the first argument without specifying a parameter.
                 // ✏️ ADD CODE HERE ✏️
-            
+            return arguments[0];
                 ////////////////////////////////////////////////////////////////////
             }
 
@@ -244,7 +244,7 @@ describe("functions", function() {
                 // Find a way to retrieve the number from here.
                 // You should not write any if's here. It should work for all possible numbers.
                 // ✏️ ADD CODE HERE ✏️
-
+            return arguments.length;
                 ////////////////////////////////////////////////////////////////////
             }
 
@@ -276,7 +276,7 @@ describe("functions", function() {
                 // This means that we can't change it.
                 // Is there a way to still make 'myConst' equal true here?
                 // ✏️ ADD CODE HERE ✏️
-
+              const myConst = true;
                 ////////////////////////////////////////////////////////////////////
 
                 if (myConst !== true) {
@@ -299,7 +299,7 @@ describe("functions", function() {
                     // However, in this exercise you're only allowed to add code here.
                     // Is there a way to define a variable in a way that the code above will work?
                     // ✏️ ADD CODE HERE ✏️
-
+                var myVariable;
                     ////////////////////////////////////////////////////////////////////
                 }
             }
@@ -313,7 +313,9 @@ describe("functions", function() {
             ////////////////////////////////////////////////////////////////////
             // Can you implement a function 'myFunction' that returns a function?
             // ✏️ ADD CODE HERE ✏️
-
+            function myFunction(){
+                return function() {}
+              }
             ////////////////////////////////////////////////////////////////////
 
             const result = myFunction();
@@ -332,7 +334,9 @@ describe("functions", function() {
             ////////////////////////////////////////////////////////////////////
             // Can you implement a function 'myFunction' that returns a reference to itself?
             // ✏️ ADD CODE HERE ✏️
-
+          function myFunction() {
+              return myFunction;
+          }
             ////////////////////////////////////////////////////////////////////
 
             const result = myFunction();
@@ -353,7 +357,7 @@ describe("functions", function() {
                 // Uh-oh, the function 'breakTheLoop' calls itself recursively (see below).
                 // There are two possible solutions that break the loop. Can you find both?
                 // ✏️ ADD CODE HERE ✏️
-
+             function breakTheLoop() {};
                 ////////////////////////////////////////////////////////////////////
 
                 breakTheLoop(); // Recursive call
