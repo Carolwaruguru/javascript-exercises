@@ -530,7 +530,13 @@ passMeAFunction(function(){ });
             // - stores the result of 'fn' in an array at the current position
             // - returns the array with results in the end
             // ✏️ ADD CODE HERE ✏️
-         
+         function map(fn, arr){
+             const results = new Array(arr.length);
+             for (let i = 0; i <arr.length; i++){
+                 results[i] = fn(arr[i], i);
+             }
+             return results;
+         }
             ////////////////////////////////////////////////////////////////////
 
             let results;
@@ -620,7 +626,7 @@ passMeAFunction(function(){ });
 
             // Now we're registering the service.handleEvent method so that
             // it will be called as soon as the event is emitted.
-            eventEmitter.addEventListener(service.handleEvent);
+            eventEmitter.addEventListener(service.handleEvent.bind(service));
             // Now let's emit the event. However, this will fail.
             // Find the reason why and fix it.
             eventEmitter.emit();
